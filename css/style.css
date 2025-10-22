@@ -1,0 +1,76 @@
+/* header da opágina de serviços */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 32px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+    top: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 3%;
+}
+
+.logo img {
+    width: 70px;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 30px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+header i {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+
+    position: absolute;
+    right: 3%;
+}
+
+header i:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+/* estilizção da seção home */
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

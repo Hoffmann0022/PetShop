@@ -1,0 +1,57 @@
+/* configurações gerais de estilização */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Modak&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --background: #F6F1EB;
+    --text-color: #4A4745 ;
+
+    --primary-color: #D9863E;
+    --secondary-color: #7BBFA3;
+
+    --white: #fff;
+    --light-gray: #EAE8E5;
+}
+
+*{
+    margin: 0;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5vw;
+    flex-direction: column;
+    background-color: var(--background);
+    color: var(--text-color);
+    position: relative;
+}
+
+h1{
+    font-family: "Modak", system-ui;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: var(--primary-color);
+}
+
+h2{
+    font-family: "Nunito", sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    font-weight: 1000;
+    color: var(--primary-color);
+}
+
+p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 30px;
+}
