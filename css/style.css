@@ -12,10 +12,10 @@ header {
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 
     position: sticky;
-    top: 20px;
+    top: 10px;
 }
 
-.logo {
+header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,17 +36,37 @@ nav ul {
 
 nav ul li a {
     color: var(--text-color);
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 2px;
     font-weight: 500;
     line-height: 30px;
     text-decoration: none;
     transition: all .3s ease-in-out;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+nav ul div .line {
+    width: 100px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+nav ul div:hover a {
     color: var(--secondary-color);
+}
+
+nav ul div:hover .line {
+    opacity: 1;
 }
 
 header i {
@@ -62,15 +82,204 @@ header i {
 }
 
 header i:hover {
-    background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
 
 /* estilizção da seção home */
 
-.home{
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+    margin-bottom: 150px;   
+    gap: 50px;
+}
+
+.video video {
+    width: 600px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.CTA_button {
+    width: 300px;
+    height: 52px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all .5s ease-in-out;
+    margin-top: 50px;
+}
+
+.CTA_button:hover {
+    background-color: var(--light-gray);
+    border: 3px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* estilizção da seção services */
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    gap: 50px;
+}
+
+.img {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.img img {
+    width: 350px;
+    height: 450px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    object-fit: cover
+}
+
+.img ul {
+    list-style: none;
+}
+
+.img ul li {
+    margin: 30px 0px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.img ul li::before {
+    font-family: "bootstrap-icons";
+    content: "\f633";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 24px;
+}
+
+/* estilizção da seção contact */
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    gap: 50px;
+}
+
+.local div{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.local div p{
+    margin: 10px 0px;
+}
+
+.local div p i{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-right: 24px;
+}
+
+iframe{
+    width: 600px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* estilizção do footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--white);
+    padding: 50px 5vw;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+}
+
+footer .top{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer .top .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top ul {
+    list-style: none;
+}
+
+.top ul li {
+    margin: 20px 0px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 10px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.social a:hover{
+    color: var(--secondary-color);
+}
+
+hr{
+    height: 2px;
+    width: 70vw;
+    background-color: var(--light-gray);
+}
+
+.bottom{
+    text-align: center;
 }

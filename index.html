@@ -20,8 +20,15 @@
 
         <nav>
             <ul>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Ecomerce</a></li>
+                <div>
+                    <li><a href="#">Serviços</a></li>
+                    <div class="line"></div>
+                </div>
+
+                <div>
+                    <li><a href="#">Ecomerce</a></li>
+                    <div class="line"></div>
+                </div>
             </ul>
         </nav>
 
@@ -40,16 +47,17 @@
                     amigo.
                 </p>
 
-                <button type="button">Agendar agora</button>
+                <button type="button" class="CTA_button">Agendar agora</button>
             </div>
 
             <div class="video">
-                <video src="./assets/video_home.mp4" autoplay loop></video>
+                <video src="./assets/video_home.mp4" autoplay loop muted playsinline></video>
             </div>
+
         </section>
 
         <section class="services">
-            <div>
+            <div class="text">
                 <h2>Tudo o que seu pet precisa, em um só lugar</h2>
 
                 <p>
@@ -68,33 +76,42 @@
                     <li>Consultas e acompanhamento preventivo com profissionais de confiança.</li>
                     <li>Rações premium, brinquedos, roupinhas e acessórios sustentáveis.</li>
                     <li>Ambiente seguro e divertido para socialização e atividades guiadas.</li>
+                    <button type="button" class="CTA_button">Agendar agora</button>
                 </ul>
             </div>
+
         </section>
 
         <section class="contact">
-            <h2>Venha nos visitar!</h2>
+            <div class="local">
+                <h2>Venha nos visitar!</h2>
+                <div>
+                    <p>
+                        <i class="bi bi-geo-alt-fill"></i> Rua das Acácias, 145 — Bairro Jardim Verde, São Paulo/SP
+                    </p>
 
-            <p>
-                <i class="bi bi-geo-alt-fill"></i> Rua das Acácias, 145 — Bairro Jardim Verde, São Paulo/SP
-            </p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i> (11) 99999-9999
+                    </p>
 
-            <p>
-                <i class="bi bi-telephone-fill"></i> (11) 99999-9999
-            </p>
+                    <p>
+                        <i class="bi bi-envelope-fill"></i> contato@pataecompanhia.com.br
+                    </p>
 
-            <p>
-                <i class="bi bi-envelope-fill"></i> contato@pataecompanhia.com.br
-            </p>
+                    <p>
+                        <i class="bi bi-calendar2-week-fill"></i> Seg a Sáb — 9h às 19h
+                    </p>
+                    <button type="button" class="CTA_button">Agendar agora</button>
+                </div>
 
-            <p>
-                <i class="bi bi-calendar2-week-fill"></i> Seg a Sáb — 9h às 19h
-            </p>
+            </div>
+
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.4249829705454!2d-46.777144213081456!3d-23.732219912912736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4dbc28cf28cd%3A0x182f9c8d93c954a4!2sR.%20das%20Acacias%20-%20Ch%C3%A1cara%20Fl%C3%B3rida%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1761086459591!5m2!1spt-BR!2sbr"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </section>
     </main>
 
@@ -102,9 +119,10 @@
         <div class="top">
 
             <div>
-                <h2>
-                    Pata & Companhia
-                </h2>
+                <div class="logo">
+                    <img src="./assets/logo.png" alt="Logo do PetShop">
+                    <h1>Pata & Companhia</h1>
+                </div>
                 <p>Cuidar com amor é o nosso instinto.</p>
             </div>
 
@@ -119,17 +137,18 @@
                 </ul>
             </div>
 
-
             <div>
                 <h3>Siga a gente</h3>
-                <p>
-                    <a href="#">Instagram</a><br>
-                    <a href="#">Facebook</a><br>
-                    <a href="#">WhatsApp</a>
+                <p class="social">
+                    <a href="#"><i class="bi bi-instagram"></i></a><br>
+                    <a href="#"><i class="bi bi-facebook"></i></a><br>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
                 </p>
             </div>
 
         </div>
+
+        <hr>
 
         <div class="bottom">
             © 2025 <strong>Pata & Companhia</strong> — Todos os direitos reservados.<br>
