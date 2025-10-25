@@ -7,7 +7,7 @@ header {
     width: 80vw;
 
     background-color: var(--white);
-    padding: 20px;
+    padding: 15px;
     border-radius: 32px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 
@@ -25,7 +25,7 @@ header .logo {
 }
 
 .logo img {
-    width: 70px;
+    width: 50px;
 }
 
 nav ul {
@@ -85,6 +85,17 @@ header i:hover {
     color: var(--secondary-color);
 }
 
+.bi-list {
+    display: none;
+}
+
+.sideMenu {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
 
 /* estilizção da seção home */
 
@@ -93,7 +104,8 @@ header i:hover {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    margin-bottom: 150px;   
+    margin-bottom: 100px;
+    width: 100%;
     gap: 50px;
 }
 
@@ -139,8 +151,9 @@ header i:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
     gap: 50px;
 }
 
@@ -183,44 +196,46 @@ header i:hover {
 
 /* estilizção da seção contact */
 
-.contact{
+.contact {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    gap: 100px;
 }
 
-.local div{
+.local div {
     display: flex;
     align-items: left;
     justify-content: center;
     flex-direction: column;
 }
 
-.local div p{
+.local div p {
     margin: 10px 0px;
 }
 
-.local div p i{
+.local div p i {
     color: var(--primary-color);
     font-size: 1.2rem;
     margin-right: 24px;
 }
 
-iframe{
-    width: 600px;
+iframe {
+    width: 50%;
+    min-width: 600px;
     border-radius: 16px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* estilizção do footer */
 
-footer{
+footer {
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 50px;
     background-color: var(--white);
@@ -230,11 +245,13 @@ footer{
     width: 100vw;
 }
 
-footer .top{
+footer .top {
     display: flex;
     align-items: start;
     justify-content: space-around;
     width: 100%;
+    max-width: 1800px;
+    flex-wrap: wrap;
 }
 
 footer .top .logo {
@@ -243,11 +260,11 @@ footer .top .logo {
     justify-content: center;
 }
 
-.top ul {
+footer .top ul {
     list-style: none;
 }
 
-.top ul li {
+footer .top ul li {
     margin: 20px 0px;
     font-size: 1rem;
     letter-spacing: 1px;
@@ -255,14 +272,14 @@ footer .top .logo {
     line-height: 10px;
 }
 
-.social{
+.social {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.social a{
+.social a {
     font-size: 1.5rem;
     color: var(--text-color);
     cursor: pointer;
@@ -270,16 +287,212 @@ footer .top .logo {
     transition: all .3s ease-in-out;
 }
 
-.social a:hover{
+.social a:hover {
     color: var(--secondary-color);
 }
 
-hr{
+hr {
     height: 2px;
     width: 70vw;
     background-color: var(--light-gray);
 }
 
-.bottom{
+.bottom {
     text-align: center;
+}
+
+/* Responsividade */
+
+@media (max-width: 1350px) {
+
+    main {
+        padding: 0px 5vw;
+    }
+
+    header {
+        justify-content: space-between;
+        width: 90vw;
+        padding: 15px 50px;
+    }
+
+    header .logo {
+        position: static;
+    }
+
+    header i {
+        position: static;
+    }
+
+    .video video {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    header {
+        width: 95vw;
+        padding: 5px 20px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .text {
+        align-items: center;
+    }
+
+    .video video {
+        width: 90vw;
+        height: 350px;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .img img {
+        width: 100%;
+        height: 350px;
+
+    }
+
+    .img ul div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .local {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .local div div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    iframe {
+        width: 100%;
+        min-width: 300px;
+    }
+
+}
+
+@media (max-width: 790px) {
+
+    header nav ul {
+        display: none;
+    }
+
+    header i {
+        display: none;
+    }
+
+    header i:hover {
+        color: var(--secondary-color);
+    }
+
+    .bi-list {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .sideMenu {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 40vw;
+        height: 100vh;
+        z-index: 100;
+
+        background-color: var(--white);
+    }
+
+    .sideMenu nav ul{
+        flex-direction: column;
+    }
+
+    .sideMenu .top{
+        position: absolute;
+        top: 20px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sideMenu .top i{
+        font-size: 1.7rem;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.315);
+    }
+
+    footer .top {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo img {
+        width: 40px;
+    }
+
+    h1 {
+        font-size: .8rem;
+    }
 }
