@@ -1,4 +1,4 @@
-/* header da opágina de serviços */
+/* header da página de serviços */
 
 header {
     display: flex;
@@ -10,6 +10,7 @@ header {
     padding: 15px;
     border-radius: 32px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all .4s ease-in-out;
 
     position: sticky;
     top: 10px;
@@ -34,7 +35,7 @@ nav ul {
     list-style: none;
 }
 
-nav ul li a {
+nav ul div li a {
     color: var(--text-color);
     font-size: 1rem;
     letter-spacing: 2px;
@@ -50,6 +51,11 @@ nav ul div {
     justify-content: center;
     flex-direction: column;
     gap: 3px;
+}
+
+nav ul .activate_menu li a, nav ul .activate_menu .line {
+    color: var(--secondary-color);
+    opacity: 1;
 }
 
 nav ul div .line {
@@ -95,6 +101,12 @@ header i:hover {
 
 .overlay {
     display: none;
+    position: fixed;
+    width: 110vw;
+    height: 110vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    backdrop-filter: blur(1.5px);  
 }
 
 /* estilizção da seção home */
@@ -103,8 +115,8 @@ header i:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 100%;
     gap: 50px;
 }
@@ -113,6 +125,8 @@ header i:hover {
     width: 600px;
     border-radius: 16px;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    z-index: -100;
+    position: relative;
 }
 
 .text {
@@ -151,8 +165,8 @@ header i:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 100%;
     gap: 50px;
 }
@@ -200,8 +214,8 @@ header i:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 100%;
     gap: 100px;
 }
@@ -242,6 +256,7 @@ footer {
     padding: 50px 5vw;
     position: relative;
     bottom: 0;
+    z-index: -1;
     width: 100vw;
 }
 
@@ -301,7 +316,219 @@ hr {
     text-align: center;
 }
 
+/* estilização do pop-up de agendamento */
+
+.conteiner{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.agendamento{
+    background-color: var(--background);
+    padding: 50px 100px;
+    border-radius: 24px;
+    width: 40vw;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.title h3{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.title div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title .activate h3{
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.title .activate .line{
+    width: 100px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+}
+
+.tutor{
+    display: block;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 30px;
+    transition: all 0.3s ease-in-out;
+    outline: 2px solid var(--white);
+
+    cursor: pointer;
+}
+
+option {
+  background-color: var(--white);
+  color: var(--text-color);
+  outline: 2px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+label{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form div div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+input[type="date"] {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  outline: 2px solid var(--white);
+  padding: 10px 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="date"]:focus {
+ outline: 2px solid var(--secondary-color);
+}
+
+input[type="file"]{
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.img_animal{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../assets/camera-fill.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border: 2px solid var(--secondary-color);
+}
+
+.conteiner_animal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal{
+    display: none;
+    width: 100%;
+}
+
+.agendar_button{
+    width: 300px;
+    height: 52px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all .5s ease-in-out;
+    margin-top: 50px;
+}
+
+.agendar_button:hover {
+    background-color: var(--light-gray);
+    border: 3px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.agendamento i{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.agendamento i:hover{
+    color: var(--secondary-color);
+}
+
 /* Responsividade */
+
+@media (max-width: 1700px){
+    .agendamento{
+    width: 50vw;
+}
+}
 
 @media (max-width: 1350px) {
 
@@ -328,6 +555,10 @@ hr {
         height: 400px;
         object-fit: cover;
     }
+
+      .agendamento{
+    width: 60vw;
+}
 
 }
 
@@ -417,6 +648,10 @@ hr {
         min-width: 300px;
     }
 
+    .agendamento{
+    width: 70vw;
+}
+
 }
 
 @media (max-width: 790px) {
@@ -439,7 +674,7 @@ hr {
     }
 
     .sideMenu {
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -447,10 +682,12 @@ hr {
         position: fixed;
         top: 0px;
         right: 0px;
-        width: 40vw;
-        height: 100vh;
+        width: 0vw;
+        height: 110vh;
         z-index: 100;
+        overflow: hidden;
 
+        transition: all .4s ease-in-out;
         background-color: var(--white);
     }
 
@@ -474,10 +711,10 @@ hr {
     .overlay {
         display: none;
         position: fixed;
-        width: 100vw;
-        height: 100vh;
+        width: 110vw;
+        height: 110vh;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.315);
+        background-color: rgba(0, 0, 0, 0.466);
     }
 
     footer .top {
@@ -485,9 +722,14 @@ hr {
         align-items: center;
         gap: 50px;
     }
+
+    .agendamento{
+    width: 80vw;
+    padding: 50px 50px;
+}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .logo img {
         width: 40px;
     }
@@ -495,4 +737,15 @@ hr {
     h1 {
         font-size: .8rem;
     }
+
+    .agendamento{
+    width: 90vw;
+    padding: 50px 30px;
+}
+
+.agendar_button{
+    width: 250px;
+    height: 52px;
+}
+
 }

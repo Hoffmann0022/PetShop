@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <img src="./assets/logo.png" alt="Logo do PetShop">
             <h1>Pata & Companhia</h1>
@@ -20,13 +20,13 @@
 
         <nav>
             <ul>
-                <div>
-                    <li><a href="#">Serviços</a></li>
+                <div class="activate_menu">
+                    <li><a href="./index.html">Serviços</a></li>
                     <div class="line"></div>
                 </div>
 
                 <div>
-                    <li><a href="#">Clientes</a></li>
+                    <li><a href="./html/clientes.html">Clientes</a></li>
                     <div class="line"></div>
                 </div>
 
@@ -41,23 +41,25 @@
         <i class="bi bi-list"></i>
     </header>
 
+    <!-- barra lateral para mobile -->
+
     <div class="overlay"></div>
 
     <div class="sideMenu">
         <div class="top">
-            <i class="bi bi-x"></i>
+            <i class="bi bi-x btn_closeMenu"></i>
             <i class="bi bi-cart2"></i>
         </div>
-        
+
         <nav>
             <ul>
-                <div>
-                    <li><a href="#">Serviços</a></li>
+                <div class="activate_menu">
+                    <li><a href="./index.html">Serviços</a></li>
                     <div class="line"></div>
                 </div>
 
                 <div>
-                    <li><a href="#">Clientes</a></li>
+                    <li><a href="./html/clientes.html">Clientes</a></li>
                     <div class="line"></div>
                 </div>
 
@@ -67,8 +69,70 @@
                 </div>
             </ul>
         </nav>
-
     </div>
+
+    <!-- pop-up de agendamento -->
+    <div class="conteiner">
+        <div class="agendamento">
+            <i class="bi bi-x btn_closeAgendamento"></i>
+            <div class="title">
+                <div id="tutor">
+                    <h3>Tutor</h3>
+                    <div id="line_agenda" class="line"></div>
+                </div>
+
+                <div id="animal">
+                    <h3>Animal</h3>
+                    <div id="line_agenda" class="line"></div>
+                </div>
+            </div>
+            <div class="tutor">
+                <form>
+                    <input type="text" name="name" id="name" placeholder="Nome" required>
+                    <input type="number" name="telefone" id="telefone" placeholder="Telefone" required>
+
+                    <div>
+                        <input type="text" name="rua" id="rua" placeholder="Rua" required>
+                        <div>
+                            <input type="number" name="numero" id="numero" placeholder="Número" required>
+                            <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
+                        </div>
+                        <input type="text" name="complemento" id="complemento" placeholder="Complemento">
+                    </div>
+
+                    <label for="data">Data do atendimento</label>
+                    <input type="date" name="data" id="data" required>
+
+                </form>
+            </div>
+
+            <div class="animal">
+                <form>
+                    <div class="conteiner_animal">
+                        <div class="img_animal">
+                            <input type="file" id="imagem" name="imagem" accept="image/*">
+                        </div>
+                    </div>
+
+                    <input type="text" name="name_animal" id="name_animal" placeholder="Nome" required>
+                    <input type="number" name="idade" id="idade" placeholder="Idade" required>
+
+                    <label for="porte">Selecione o porte do seu animal</label>
+                    <select id="porte" name="porte" required>
+                        <option value="">Selecione...</option>
+                        <option value="pequeno">Porte Pequeno</option>
+                        <option value="medio">Porte Médio</option>
+                        <option value="grande">Porte Grande</option>
+                        <option value="gigante">Porte Gigante</option>
+                    </select>
+                    <div>
+                        <button type="button" class="agendar_button">Agendar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <main>
         <section class="home">
@@ -81,8 +145,9 @@
                     Oferecemos produtos, serviços e carinho para garantir o bem-estar e a felicidade do seu melhor
                     amigo.
                 </p>
-
+                
                 <button type="button" class="CTA_button">Agendar agora</button>
+                
             </div>
 
             <div class="video">
@@ -198,6 +263,7 @@
         </div>
     </footer>
 
+    <script src="./js/index.js" defer></script>
 </body>
 
 </html>
