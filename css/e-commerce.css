@@ -1,4 +1,4 @@
-/* header da página de clientes */
+/* header da página de e-commerce */
 
 header {
     display: flex;
@@ -53,7 +53,8 @@ nav ul div {
     gap: 3px;
 }
 
-nav ul .activate_menu li a, nav ul .activate_menu .line {
+nav ul .activate_menu li a,
+nav ul .activate_menu .line {
     color: var(--secondary-color);
     opacity: 1;
 }
@@ -106,25 +107,25 @@ header i:hover {
     height: 110vh;
     top: 0;
     background-color: rgba(0, 0, 0, 0.466);
-    backdrop-filter: blur(1.5px);  
+    backdrop-filter: blur(1.5px);
 }
 
-/* estilização do grid e cards */
+/* estilização dos cards de produtos */
 
-.grid{
+.grid_ecommerce {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
     justify-content: center;
     width: 100%;
     gap: 30px;
     margin: 100px 0px;
-    
+
 }
 
-.card{
+.card_ecommerce {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     background-color: var(--white);
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -134,54 +135,67 @@ header i:hover {
     transition: all .4s ease-in-out;
 }
 
-.card:hover{
-    transform: scale(1.1);
+.img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.img {
-    background-image: url('../assets/petImg2.jpg');
+.img img {
     width: 150px;
     height: 150px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    border: 2px solid var(--secondary-color);
+    object-fit: contain;
 }
 
-.info{
+
+.info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     margin-top: 30px;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
 }
 
-.names{
+.names {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
+    gap: 10px;
 }
 
-.names h3{
-    margin-bottom: 0px;
+.names h3 {
+    font-size: 1.2rem;
 }
 
-.data{
+.names p {
+    font-size: .9rem;
+    line-height: normal;
+}
+
+.preco {
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.data span{
-    font-size: .7rem;
-    letter-spacing: 1px;
-    font-weight: 300;
-    color: var(--primary-color);
+
+.preco i{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.preco i:hover {
+    color: var(--secondary-color);
 }
 
 /* estilizção do footer */
@@ -256,197 +270,12 @@ hr {
     text-align: center;
 }
 
-/* estilização do pop-up de agendamento */
-
-.conteiner{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.agendamento{
-    background-color: var(--background);
-    padding: 50px 100px;
-    border-radius: 24px;
-    width: 40vw;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    
-}
-
-.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.title h3{
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 5px;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-.title div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.title .activate h3{
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: var(--primary-color);
-}
-
-.title .activate .line{
-    width: 100px;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--primary-color);
-}
-
-.tutor{
-    display: block;
-    width: 100%;
-}
-
-form{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-}
-
-input, select{
-    width: 100%;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 300;
-    line-height: 30px;
-    transition: all 0.3s ease-in-out;
-    outline: 2px solid var(--white);
-
-    cursor: pointer;
-}
-
-option {
-  background-color: var(--white);
-  color: var(--text-color);
-  outline: 2px solid var(--secondary-color);
-  cursor: pointer;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input:focus, select:focus {
-    outline: 2px solid var(--secondary-color);
-}
-
-label{
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 300;
-    line-height: 30px;
-}
-
-form div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-form div div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-}
-
-input[type="date"] {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: var(--text-color);
-  outline: 2px solid var(--white);
-  padding: 10px 14px;
-  transition: all 0.3s ease-in-out;
-}
-
-input[type="date"]:focus {
- outline: 2px solid var(--secondary-color);
-}
-
-input[type="file"]{
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.img_animal{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: url("../assets/camera-fill.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    border: 2px solid var(--secondary-color);
-}
-
-.conteiner_animal{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.animal{
-    display: none;
-    width: 100%;
-}
-
-.agendamento i{
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-
-.agendamento i:hover{
-    color: var(--secondary-color);
-}
-
-
 /* Responsividade */
 
-@media (max-width: 1700px){
-    .agendamento{
-    width: 50vw;
-}
+@media (max-width: 1700px) {
+    .agendamento {
+        width: 50vw;
+    }
 }
 
 @media (max-width: 1350px) {
@@ -468,10 +297,6 @@ input[type="file"]{
     header i {
         position: static;
     }
-
-      .agendamento{
-    width: 60vw;
-}
 
 }
 
@@ -505,9 +330,6 @@ input[type="file"]{
         letter-spacing: 1px;
     }
 
-    .agendamento{
-    width: 70vw;
-}
 
 }
 
@@ -548,11 +370,11 @@ input[type="file"]{
         background-color: var(--white);
     }
 
-    .sideMenu nav ul{
+    .sideMenu nav ul {
         flex-direction: column;
     }
 
-    .sideMenu .top{
+    .sideMenu .top {
         position: absolute;
         top: 20px;
         width: 80%;
@@ -561,7 +383,7 @@ input[type="file"]{
         justify-content: space-between;
     }
 
-    .sideMenu .top i{
+    .sideMenu .top i {
         font-size: 1.7rem;
     }
 
@@ -580,10 +402,6 @@ input[type="file"]{
         gap: 50px;
     }
 
-    .agendamento{
-    width: 80vw;
-    padding: 50px 50px;
-}
 }
 
 @media (max-width: 450px) {
@@ -594,10 +412,5 @@ input[type="file"]{
     h1 {
         font-size: .8rem;
     }
-
-    .agendamento{
-    width: 90vw;
-    padding: 50px 30px;
-}
 
 }

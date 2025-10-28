@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Pata & Companhia - Clientes</title>
 </head>
-<body>
+<body class="clientes">
     <header class="header">
         <div class="logo">
             <img src="../assets/logo.png" alt="Logo do PetShop">
@@ -29,7 +29,7 @@
                 </div>
 
                 <div>
-                    <li><a href="#">Ecomerce</a></li>
+                    <li><a href="./e-commerce.html">E-commerce</a></li>
                     <div class="line"></div>
                 </div>
             </ul>
@@ -62,17 +62,72 @@
                 </div>
 
                 <div>
-                    <li><a href="#">Ecomerce</a></li>
+                    <li><a href="./e-commerce.html">E-commerce</a></li>
                     <div class="line"></div>
                 </div>
             </ul>
         </nav>
     </div>
 
+    <!-- pop-up de detalhes -->
+
+    <div class="conteiner">
+        <div class="agendamento">
+            <i class="bi bi-x btn_closeAgendamento"></i>
+            <div class="title">
+                <div id="tutor">
+                    <h3>Tutor</h3>
+                    <div id="line_agenda" class="line"></div>
+                </div>
+
+                <div id="animal">
+                    <h3>Animal</h3>
+                    <div id="line_agenda" class="line"></div>
+                </div>
+            </div>
+            <div class="tutor">
+                <form>
+                    <input type="text" name="name_tutor" id="name_tutor" placeholder="" disabled>
+                    <input type="number" name="telefone" id="telefone" placeholder="" disabled>
+
+                    <div>
+                        <input type="text" name="rua" id="rua" placeholder="" disabled>
+                        <div>
+                            <input type="number" name="numero" id="numero" placeholder="" disabled>
+                            <input type="text" name="cidade" id="cidade" placeholder="" disabled>
+                        </div>
+                        <input type="text" name="complemento" id="complemento" placeholder="" disabled>
+                    </div>
+
+                    <label for="data">Data do atendimento</label>
+                    <input type="text" name="date" id="data" placeholder="" disabled>
+
+                </form>
+            </div>
+
+            <div class="animal">
+                <form>
+                    <div class="conteiner_animal">
+                        <div class="img_animal">
+                            
+                        </div>
+                    </div>
+
+                    <input type="text" name="name_animal" id="name_animal" placeholder="" disabled>
+                    <input type="number" name="idade" id="idade" placeholder="" disabled>
+
+                    <label for="porte">Porte do seu animal</label>
+                    <input type="text" name="porte" id="porte" placeholder="" disabled>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="grid">
 
-            <!-- <div class="card">
+        <!--<div class="card">
                 <div class="img">
                     
                 </div>
